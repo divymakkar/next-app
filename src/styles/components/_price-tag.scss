@@ -1,0 +1,52 @@
+.price-tag-container {
+  $strike-price-color: $description-text-color-2;
+  $strike-price-weight: 400;
+
+  $current-price-color: $heading-color-dark;
+  $current-price-weight: 600;
+
+  $inventory-color: $sub-heading-color-light;
+  $inventory-weight: 400;
+
+  &__md {
+    .price {
+      &__striked {
+        font-size: 1.3rem;
+        font-weight: $strike-price-weight;
+        color: $strike-price-color;
+        text-decoration: line-through;
+      }
+      &__current {
+        font-size: 1.8rem;
+        font-weight: $current-price-weight;
+        color: $current-price-color;
+      }
+      &__least-priced-inventory {
+        font-size: 1.3rem;
+        font-weight: $inventory-weight;
+        color: $inventory-color;
+      }
+    }
+  }
+
+  &__lg {
+    .price {
+      &__striked {
+        font-size: 1.4rem;
+        font-weight: $strike-price-weight;
+        color: $strike-price-color;
+        text-decoration: line-through;
+      }
+      &__current {
+        font-size: 2.2rem;
+        font-weight: $current-price-weight;
+        color: $current-price-color;
+      }
+      &__least-priced-inventory {
+        font-size: 1.4rem;
+        font-weight: $inventory-weight;
+        color: $inventory-color;
+      }
+    }
+  }
+}

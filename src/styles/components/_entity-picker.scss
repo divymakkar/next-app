@@ -1,0 +1,89 @@
+.entity-picker-container {
+  position: relative;
+  background-color: #ffffff;
+
+  .entity-picker-input {
+    width: 100%;
+    border: $border-light;
+    border-radius: 5px;
+  }
+  .entity-picker-wrapper {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    width: 40rem;
+    border: $border-light;
+    padding: 1.6rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+    // $triangle-start: 1rem;
+    // clip-path: polygon(
+    //   $triangle-start 5%,
+    //   $triangle-start + 1rem 0,
+    //   $triangle-start + 2rem 5%,
+    //   100% 5%,
+    //   100% 100%,
+    //   0 100%,
+    //   0 5%
+    // );
+  }
+  .entity-items-wrapper {
+    padding: 1rem;
+    border: $border-light;
+    border-radius: 5px;
+  }
+  .entity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    &:not(:last-child) {
+      border-bottom: $border-dark;
+    }
+  }
+  .entity-item-left {
+  }
+  .entity-item-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .entity-name,
+  .entity-count {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $text-heading-3;
+  }
+  .entity-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $text-subheading-3;
+  }
+  .entity-counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .entity-count {
+      display: inline-block;
+      width: 2rem;
+      margin: 0 2rem;
+      text-align: center;
+    }
+    .count-op {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50px;
+      background-color: $background-color-light-2;
+      cursor: pointer;
+      svg {
+        position: absolute;
+        @include alignBothAxes;
+      }
+      &__active {
+        color: $brand-primary-color;
+        background-color: $brand-light-color;
+      }
+    }
+  }
+}

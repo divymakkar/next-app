@@ -1,0 +1,107 @@
+.tour-map-container {
+  .maps-title {
+    margin-bottom: 1rem;
+  }
+  .tour-map-points {
+    display: flex;
+    justify-content: space-around;
+
+    @include media("<=phone-xl") {
+      flex-direction: column;
+    }
+  }
+  .tour-map-point-block {
+    flex-grow: 1;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    &:not(:last-child) {
+      margin-right: 2rem;
+      border-right: $border-light;
+      @include media("<=phone-xl") {
+        border-right: none;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .point-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $sub-heading-color-dark;
+    @include media("<=phone-xl") {
+      img {
+        transform: scale(0.8);
+      }
+    }
+  }
+  .point-details {
+    display: flex;
+    margin-top: 2rem;
+    @include media("<=phone-xl") {
+      margin-top: 0;
+      margin-left: 5rem;
+    }
+  }
+  .point-icon {
+    margin-top: 3px;
+  }
+  .point-location-wrap {
+    padding-left: 1rem;
+  }
+  .point-location {
+    // display: flex;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $hyperlink-text-color;
+    text-decoration: underline;
+    cursor: pointer;
+    img {
+      margin-left: 5px;
+      filter: invert(43%) sepia(70%) saturate(2972%) hue-rotate(211deg)
+        brightness(102%) contrast(103%);
+    }
+  }
+  .map-icon {
+    stroke: $hyperlink-text-color;
+  }
+  .point-location-desc {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $sub-heading-color-dark;
+  }
+  .dropoff-point {
+    margin-left: -5px;
+  }
+  .map-text {
+    @include flexAlignCenter;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $text-heading-2;
+  }
+  .how-to-reach-card {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $sub-heading-color-dark;
+  }
+  .tour-location-map {
+    position: relative;
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    @include media("<tablet") {
+      border-radius: 5px;
+      height: 15rem;
+    }
+
+    .map {
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+    .round-gps {
+      transform: scale(0.8);
+    }
+  }
+}

@@ -1,0 +1,149 @@
+.tour-reviews-card {
+  $avatar-height: 8rem;
+
+  .tour-reviews-card-top {
+    max-width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tour-reviews-view-all {
+    text-align: right;
+  }
+  .reviews-carousel {
+    width: calc(100% - 5rem);
+  }
+
+  .carousel-arrows {
+    display: flex;
+    width: 10rem;
+    height: 3rem;
+    justify-content: flex-end;
+
+    span {
+      @include flexAlignCenter;
+      padding: 3px 4px;
+      border: 0.5px solid $heading-color-dark;
+      border-radius: 3px;
+      cursor: pointer;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      &:last-child {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+  .tour-review-card {
+    position: relative;
+
+    &__sm {
+      .tour-review-card-content {
+        grid-template-columns: 3rem 5fr;
+      }
+      .user-avatar {
+        height: 4rem;
+        width: 4rem;
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      .user-name-wrapper {
+        display: flex;
+        justify-content: space-between;
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      .user-name-wrapper-left {
+        .username {
+          font-size: 1.6rem;
+          font-weight: 600;
+        }
+        .reviewed-at {
+          display: block;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: $sub-heading-color-dark;
+        }
+      }
+      .user-name-wrapper-right {
+        align-self: flex-start;
+      }
+      .user-review-wrapper {
+        grid-area: 2 / 1 / 3 / 3;
+        margin-top: 1rem;
+
+        .user-posts-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          .user-post {
+            position: relative;
+            width: 7rem;
+            height: 7rem;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 3px;
+            overflow: hidden;
+            img {
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+  .guest-review-title {
+    @include media(">tablet-lg") {
+      display: none;
+    }
+  } //NOTE: remove this class
+  .tour-review-card-content {
+    display: grid;
+    grid-template-columns: $avatar-height 5fr;
+    grid-template-rows: 1fr auto;
+    grid-column-gap: 2rem;
+
+    // border: $border-light;
+    // border-radius: 5px;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  .user-avatar {
+    height: $avatar-height;
+    width: $avatar-height;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    grid-area: 1 / 1 / 3 / 2;
+  }
+  .user-name-wrapper {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .user-name-wrapper-left {
+    .username {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .reviewed-at {
+      display: none;
+    }
+  }
+  .user-name-wrapper-right {
+    .rating-value {
+      margin-left: 1rem;
+    }
+  }
+  .user-review-wrapper {
+    grid-area: 2 / 2 / 3 / 3;
+    .user-comment {
+      padding-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $description-text-color-1;
+    }
+    .user-posts-wrapper {
+      display: none;
+    }
+  }
+}

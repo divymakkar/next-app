@@ -1,0 +1,11 @@
+.hide-on-desktop {
+  @include media(">=desktop", "<=widescreen") {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @include media("<tablet") {
+    display: none;
+  }
+}

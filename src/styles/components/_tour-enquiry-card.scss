@@ -1,0 +1,81 @@
+.tour-enquiry-card-container {
+  .enquiry-title {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $text-heading-2;
+  }
+  .enquiry-checkboxes {
+    margin: 1rem 0;
+  }
+  .date-of-travel-wrapper {
+    .text {
+      margin-top: 1rem;
+    }
+    .buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        font-weight: 500;
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .message-input {
+    height: 10rem !important;
+  }
+  .send-enquiry-btn {
+    margin-top: 2rem;
+  }
+}
+
+.form-input {
+  margin: 1.5rem 0;
+
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-input-tag {
+    height: 4rem;
+    margin: 3px 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: $brand-font-family !important;
+    input {
+      font-size: 1.3rem;
+      font-weight: 500;
+      border-radius: 5px 0 0 5px;
+    }
+    &::placeholder {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $text-subheading-4;
+    }
+  }
+  .p-inputnumber-input {
+    padding-left: 1rem !important;
+    &::placeholder {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: $text-subheading-4 !important;
+    }
+  }
+
+  .text {
+    color: $sub-heading-color-dark;
+    &__label {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    &__desc {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    &__error {
+    }
+  }
+}

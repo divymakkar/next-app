@@ -1,0 +1,102 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+// Breakpoint variables
+$breakpoints: (
+  "xs-phone": 320px,
+  "phone-sm": 375px,
+  "phone": 480px,
+  "phone-lg": 576px,
+  "phone-xl": 630px,
+  "tablet": 768px,
+  "tablet-lg": 925px,
+  "tablet-xl": 960px,
+  "desktop": 1024px,
+  "desktop-lg": 1080px,
+  "widescreen": 1200px,
+  "widescreen-lg": 1440px,
+  "widescreen-xl": 1600px,
+  "widescreen-xxl": 1840px,
+);
+
+// keywords
+$media-expressions: (
+  "screen": "screen",
+  "print": "print",
+  "handheld": "handheld",
+  "landscape": "(orientation: landscape)",
+  "portrait": "(orientation: portrait)",
+  "retina2x": "(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)",
+  "retina3x": "(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)",
+);
+
+//SUBSECTION: App
+$max-app-width: 1080px;
+@include media("<=widescreen") {
+  $max-app-width: 800px;
+}
+
+//SUBSECTION: Brand
+$brand-primary-color: #f37022;
+$brand-secondary-color: #ffba0a;
+$brand-primary-color-dark: #de6520;
+$brand-light-color: #f370221a;
+$brand-light-background: #f3702208;
+$brand-font-family: "Poppins", "Arial";
+
+//SUBSECTION: Text
+$heading-color-black: #000000;
+$heading-color-dark: #3c3b3b;
+
+$sub-heading-color-dark: #656565;
+$sub-heading-color-light: #8e8e8e;
+$sub-heading-color-verylight: #a2a2a2;
+$sub-heading-color-ultralight: #bababa;
+
+$text-heading-1: #545454;
+$text-heading-2: #515151;
+$text-heading-3: #5b5b5b;
+$text-subheading-1: #a7a7a7;
+$text-subheading-2: #626262;
+$text-subheading-3: #c7c7c7;
+$text-subheading-4: #cbcbcb;
+$text-active-color: #6ac259;
+
+$background-color-white: #ffffff;
+$background-color-grey: #e2e2e2;
+$background-color-light-1: #efefef;
+$background-color-light-2: #f3f3f3;
+$background-color-light-3: #f4f4f4;
+
+$hyperlink-text-color: #4d7eff;
+$description-text-color-1: #707070;
+$description-text-color-2: #7a7a7a;
+
+//SUBSECTION: Header
+$header-height: 8rem;
+$header-border: 1px solid #e1e1e1;
+$header-text: #aeaeae;
+
+//SUBSECTION:Rating
+$rating-star-color: #ffba0a;
+$rating-color-high: #0fb680;
+$rating-color-medium: #e58f13;
+$rating-color-low: #d0021b;
+
+$rating-highlight-green: #008744;
+$rating-highlight-yellow: #ffa700;
+$rating-highlight-red: #d62d20;
+
+$border-verydark: 1px solid #a2a2a2;
+$border-dark: 1px solid #cbcbcb;
+$border-light: 1px solid #e0e0e0;
+$border-search: 1px solid #e4e4e4;
+$border-brand: 1px solid $brand-primary-color;
+$border-brand-contrast: 1px solid #ffba0a;
+
+$card-header-font-lg: 2rem;
+$card-header-font-md: 1.7rem;
+
+// SUBSECTION: Calendar
+$available-day-color: #10db25;
+$available-day-bg-color: #10db251a;

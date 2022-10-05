@@ -1,0 +1,131 @@
+$grid-gap: 5px;
+
+.scroll-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  z-index: 12;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+  }
+
+  &__grid {
+    max-width: 750px;
+    margin: 50px auto 0;
+    padding-bottom: 50px;
+    // display: grid;
+    // gap: $grid-gap;
+
+    @include media("<desktop") {
+      margin-top: 0;
+    }
+  }
+
+  &__grid-row {
+    width: 100%;
+    overflow: hidden;
+
+    &--big {
+      height: 275px;
+      @include media(">=desktop") {
+        height: 500px;
+      }
+    }
+
+    &--small {
+      height: 135px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $grid-gap;
+      @include media(">=desktop") {
+        height: 240px;
+      }
+    }
+  }
+
+  &__grid-img {
+    height: 100%;
+    // width: 100%;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 0;
+
+    img {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.15);
+      z-index: 1;
+      transition: 0.3s opacity ease-out;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__banner-img {
+    margin-bottom: 5px;
+  }
+
+  .availability {
+    &__close-btn {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 3rem;
+      height: 3rem;
+      // padding: 10px;
+      font-size: 1.5rem;
+      margin: 10px;
+      border-radius: 50px;
+      background-color: #ffffff;
+
+      &:before {
+        margin-top: 1px;
+        margin-bottom: -1px;
+      }
+
+      @include media("<desktop") {
+        &:after {
+          position: absolute;
+          content: "";
+          top: -10px;
+          right: -10px;
+          left: -10px;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+}

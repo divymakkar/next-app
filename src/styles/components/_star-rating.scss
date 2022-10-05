@@ -1,0 +1,8 @@
+.star-rating {
+  .star {
+    color: $rating-star-color !important;
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+}

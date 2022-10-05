@@ -1,0 +1,213 @@
+.tour-page-container {
+  position: relative;
+  top: -10rem;
+
+  @include media("<=desktop") {
+    top: -10rem;
+  }
+}
+
+// SUBSECTION: Sidebar
+.icon-highlights-on-sidebar {
+  // padding: 2rem !important;
+  .icon-highlights-container {
+    // grid-template-rows: repeat(2, 10rem);
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .highlight-icon-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+  }
+  .highlight-title {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+.tour-overview {
+  font-family: $brand-font-family;
+  font-size: 1.5rem;
+
+  strong {
+    font-weight: 500;
+  }
+
+  .long-description {
+    margin-top: 5rem;
+  }
+}
+
+// SUBSECTION: Tour-Head
+.tour-head {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1.5rem;
+
+  @include media("<=tablet-lg") {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+  @include media(">tablet-lg") {
+    grid-template-columns: calc(70% - 1.5rem) 30%;
+  }
+  .tour-head-left {
+  }
+
+  .tour-head-right {
+    .sticky-container {
+      position: sticky;
+      top: $header-height + 1rem;
+    }
+  }
+
+  .tour-title-card {
+    padding: 2rem 1.5rem;
+    // min-height: 10rem;
+    color: $heading-color-dark;
+    background-color: white;
+    border-radius: 10px;
+
+    .tour-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $heading-color-dark;
+    }
+    .tour-content {
+      margin-top: 2rem;
+    }
+
+    @include media(">tablet-lg") {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
+}
+
+// SUBSECTION: whats in the box
+.whats-in-the-box {
+  margin-top: 1.5rem;
+}
+
+// SECTION: Tabhighlights-section
+.tab-highlight-section {
+  margin-top: 1.5rem auto 0 auto;
+
+  // SUBSECTION: Tabhighlight Menu
+  .highlight-tabmenu {
+    margin-top: 1.5rem;
+    position: sticky;
+    top: $header-height * 2;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include media("<=phone") {
+      top: 0;
+    }
+  }
+}
+// SUBSECTION: Tour Itinerary
+.tour-itinerary-card {
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .view-all-btn {
+    width: max-content;
+
+    i {
+      vertical-align: middle;
+      font-size: 1em;
+    }
+  }
+}
+
+// SUBSECTION: Tour FAQs Section
+.tour-faq-card {
+  padding-right: 3rem;
+  .card-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .view-all-btn {
+    width: max-content;
+
+    i {
+      vertical-align: middle;
+      font-size: 1em;
+    }
+  }
+}
+.tour-faqs-wrapper {
+  margin-top: 1.5rem;
+}
+.faq-accordion-tab,
+.policy-accordion-tab {
+  font-family: $brand-font-family;
+  font-size: 1.6rem;
+  color: $text-heading-2;
+}
+.faq-accordion-tab {
+  .p-accordion-header-text {
+    margin-left: 5px;
+  }
+}
+.p-accordion-content {
+  font-size: 1.4rem !important;
+  font-weight: 400 !important;
+  color: $description-text-color-2 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  ul {
+    margin-top: 0 !important;
+    // padding-bottom: 2rem;
+    border-bottom: $border-light !important;
+  }
+}
+.pi-plus,
+.pi-minus {
+  font-size: 1.5rem !important;
+  color: $brand-primary-color !important;
+}
+
+// SUBSECTION: Tour policies
+.tour-policies-card {
+}
+.policy-wrapper {
+  &:first-child {
+    border-top: $border-light;
+  }
+  transition: all 0.3s ease-in-out;
+}
+.policy-name {
+  padding-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $sub-heading-color-dark;
+}
+.policy-details {
+  font-family: $brand-font-family;
+  margin-top: 1.5rem;
+  margin-left: 3rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $description-text-color-2;
+}
+.policy-item {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+// SUBSECTION: Destination cards
+.destinations-card {
+  .card-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// !SECTION: Tabhighlights-section

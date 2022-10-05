@@ -1,0 +1,29 @@
+.more-links-section {
+  .p-tabmenu {
+    border-top: $border-light !important;
+    overflow-y: hidden;
+  }
+}
+.links-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  margin: 1rem;
+  margin-left: 0;
+  padding-top: 10px;
+
+  .link {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 5px;
+    padding-left: 0;
+    color: $sub-heading-color-dark;
+    text-align: left;
+    transition: all 0.2s ease;
+    &:hover {
+      color: $brand-primary-color;
+      // background-color: $brand-light-color;
+    }
+  }
+}

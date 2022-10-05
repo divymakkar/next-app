@@ -1,0 +1,26 @@
+.thrillo-logo {
+  background: url("/images/thrillo-logos.png");
+  &.nav-drop-logo {
+    width: 268px;
+    height: 62px;
+  }
+  &.colored-logo {
+    background-position: 0 -221px;
+    width: 175px;
+    height: 35px;
+  }
+  &.white-logo {
+    width: 175px;
+    height: 35px;
+    background-position: 0 -186px;
+  }
+  &.ad_ex-logo {
+    background-position: 0 0;
+  }
+  &.ta-logo {
+    background-position: 0 -62px;
+  }
+  &.wee_ex-logo {
+    background-position: 0 -124px;
+  }
+}

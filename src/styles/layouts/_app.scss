@@ -1,0 +1,16 @@
+.app-container {
+  max-width: $max-app-width;
+  margin: 0 auto;
+  // padding: 0 2rem;
+  @include media("<=widescreen") {
+    padding: 0 5rem;
+  }
+  @include media("<=tablet") {
+    padding: 0 2rem;
+  }
+  @include media("<=phone") {
+    padding: 0 1rem;
+  }
+  // @include media("") {
+  // }
+}

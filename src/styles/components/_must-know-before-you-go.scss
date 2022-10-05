@@ -1,0 +1,14 @@
+.must-know {
+  &__container {
+  }
+  &__ul {
+    margin-top: 2.5rem;
+    padding-left: 2rem;
+  }
+  &__li {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $sub-heading-color-dark;
+  }
+}

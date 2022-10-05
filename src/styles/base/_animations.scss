@@ -1,0 +1,129 @@
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+@keyframes slider-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1775px, 0, 0);
+  }
+}
+
+@-moz-keyframes slider-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1775px, 0, 0);
+  }
+}
+
+@-webkit-keyframes slider-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1775px, 0, 0);
+  }
+}
+
+@-ms-keyframes slider-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1775px, 0, 0);
+  }
+}
+
+@-o-keyframes slider-right {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1775px, 0, 0);
+  }
+}
+
+@keyframes slider-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+
+@-moz-keyframes slider-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+
+@-webkit-keyframes slider-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+
+@-ms-keyframes slider-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+
+@-o-keyframes slider-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+
+@keyframes btn-loading {
+  0% {
+    left: -10px;
+  }
+  100% {
+    left: calc(100% + 10px);
+  }
+}
+@-ms-keyframes btn-loading {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}
+@-o-keyframes btn-loading {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(1775px, 0, 0);
+  }
+}

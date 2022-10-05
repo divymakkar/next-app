@@ -1,0 +1,289 @@
+.base-block {
+  background: #fff;
+  box-shadow: 0 0 50px 0 rgb(0 0 0 / 2%);
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+  .info-head {
+    padding: 25px 25px 10px 35px;
+    @include media("<=phone") {
+      padding: 10px 14px;
+    }
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 3px;
+      background-color: #ff5300;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    .left-side {
+      max-width: 70%;
+      display: flex;
+      align-items: center;
+      @include media("<=phone") {
+        max-width: 100%;
+      }
+      .number {
+        font-size: 5.7rem;
+        @include media("<=phone") {
+          font-size: 6.7rem;
+        }
+        margin-right: 20px;
+        color: #ff5300;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .half-width {
+        .tour-title {
+          font-size: 2.1rem;
+          font-weight: 700;
+          color: #000;
+          letter-spacing: 1px;
+          a {
+            color: #000 !important;
+            @include media("<=phone") {
+              font-size: 2.1rem;
+            }
+          }
+        }
+      }
+    }
+    .right-side {
+      flex-direction: row !important;
+      justify-content: space-around !important;
+      align-items: flex-start !important;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 22%;
+      .reviews-holder {
+        font-size: 1.2rem;
+        margin-top: 5px;
+        text-align: center;
+        span {
+          display: block;
+        }
+        .reviews-numb {
+          font-size: 1rem;
+          color: #696969;
+          font-weight: 400;
+          margin-top: 5px;
+        }
+      }
+      .mobile-display {
+        .value-holder {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #fff;
+          max-width: 80px;
+          margin-left: auto;
+          padding: 7px 22px;
+          border-radius: 9px;
+          background-color: #ffb100;
+          margin-bottom: 10px;
+        }
+        .raiting-holder {
+          color: #505050;
+          font-size: 1.4rem;
+          display: flex;
+          align-items: center;
+          .raiting-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            li {
+              font-size: 0.9rem;
+              margin-right: 5px;
+              img {
+                width: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .base-block-image {
+    height: 450px;
+    @include media("<=phone") {
+      height: 300px;
+    }
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .base-block-info {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ebebeb;
+    @include media("<=phone") {
+      padding: 15px 17px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #ebebeb;
+    }
+    .mobile-hidden {
+      @include media("<=desktop") {
+        display: none !important;
+      }
+    }
+    .price-holder {
+      font-size: 1.3rem;
+      width: auto;
+      // margin-left: auto;
+      margin-right: 25px;
+      @include media("<=phone") {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0;
+        padding: 0px 5px;
+      }
+      .services-price {
+        margin-left: auto;
+        display: flex;
+        @include media("<=phone") {
+          margin-left: 0px;
+          display: block;
+        }
+        .cut-off-price {
+          @include media("<=phone") {
+            margin-right: 5px;
+          }
+          .th-currency-tag {
+            @include media("<=phone") {
+              font-size: 2.3rem;
+            }
+          }
+        }
+        .big-size {
+          font-size: 2.5rem;
+          display: flex;
+          font-weight: 700;
+          line-height: 25px;
+          padding-left: 5px;
+          margin-left: 5px;
+          @include media("<=phone") {
+            display: contents;
+          }
+          .th-currency-tag {
+            margin-right: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #555353;
+            @include media("<=phone") {
+              font-size: 2.8rem;
+            }
+          }
+          .current-price-inventory-name {
+            text-transform: lowercase;
+            font-size: 13px;
+            margin-top: 4px;
+            display: block;
+            color: #a5a4a4;
+            font-weight: 600;
+            @include media("<=phone") {
+              font-size: 18px;
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+      .right-side {
+        .rating-holder {
+          display: flex;
+          margin: 6px 0px;
+          align-items: center;
+          .rating-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            li {
+              margin-right: 2px;
+              img {
+                width: 85%;
+              }
+            }
+          }
+        }
+        .mobile-rating-num {
+          font-size: 12px;
+          color: #505050;
+        }
+      }
+      .mobile-hidden {
+        @include media("<=desktop") {
+          display: none;
+        }
+      }
+      .desktop-hidden {
+        @include media(">desktop") {
+          display: none !important;
+        }
+      }
+    }
+    .additional-list-info {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin-right: 20px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        @include media("<=phone") {
+          margin-bottom: 7px;
+        }
+        img {
+          height: 25px;
+          margin-right: 10px;
+          @include media("<=phone") {
+            height: 16px;
+            margin-right: 5px;
+          }
+        }
+        span {
+          font-size: 1.3rem;
+          @include media("<=phone") {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    .btn-holder {
+      flex: 0 0 auto;
+      .btn {
+        font-size: 1.4rem;
+        padding: 12px 30px;
+        color: #fff;
+        background: #ff5300;
+        font-weight: 700;
+        @include media("<=phone") {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

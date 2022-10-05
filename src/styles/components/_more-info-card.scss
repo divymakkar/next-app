@@ -1,0 +1,21 @@
+.p-tooltip {
+  .p-tooltip-text {
+    background: $background-color-white !important;
+    border: $border-brand-contrast;
+    box-shadow: 1px 1px 2px rgba(255, 186, 10, 0.3) !important;
+    color: $text-heading-2 !important;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+
+    & ul {
+      padding-left: 20px;
+    }
+    .more-info-card-content {
+      max-width: 250px;
+    }
+  }
+  .p-tooltip-arrow {
+    border-top-color: $rating-star-color !important;
+  }
+}

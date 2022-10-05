@@ -1,0 +1,457 @@
+.order-page {
+  max-width: $max-app-width;
+  margin: $header-height auto 0 auto;
+
+  .order-page-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+
+    .order-page-container-item {
+      // SECTION: Order Description
+      &.order-desc {
+        margin-top: 3rem;
+        grid-area: 1 / 1 / 3 / 5;
+
+        .order-desc-container {
+          background: $background-color-white;
+          border: $border-light;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+
+          &-item.order-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 2fr 2fr 2fr;
+            grid-template-rows: 2fr 5fr;
+            grid-column-gap: 2rem;
+            grid-row-gap: 1rem;
+            border-bottom: $border-light;
+            margin-bottom: 20px;
+
+            .order-info-left {
+              grid-area: 1 / 1 / 3 / 3;
+              position: relative;
+
+              &-image {
+                width: 13rem;
+                height: 11rem;
+                border-radius: 5%;
+              }
+              &-rating {
+                position: absolute;
+                padding: 2px 5px;
+                top: 8rem;
+                right: 1rem;
+                color: white;
+                background: $rating-color-high;
+                border-radius: 2.5px;
+              }
+            }
+
+            .order-info-title {
+              grid-area: 1 / 3 / 2 / 7;
+              font-weight: 600;
+              font-size: 1.8rem;
+              line-height: 2.7rem;
+              color: $heading-color-dark;
+            }
+
+            .order-info-product-details {
+              grid-area: 2 / 3 / 3 / 7;
+              display: flex;
+              flex-direction: column;
+              font-weight: 400;
+              font-size: 1.4rem;
+              line-height: 2.1rem;
+              color: $text-heading-2;
+
+              &-location {
+                display: flex;
+                align-items: center;
+                color: $sub-heading-color-light;
+                letter-spacing: 1px;
+
+                &-icon {
+                  margin-right: 0.8rem;
+                }
+              }
+
+              &-inventory {
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+
+                &-icon {
+                  margin-right: 0.8rem;
+                }
+              }
+
+              &-dates {
+                display: flex;
+                align-items: flex-start;
+
+                &-icon {
+                  margin-right: 0.8rem;
+                }
+
+                &-multiple {
+                  display: flex;
+                  flex-direction: column;
+
+                  .top-row {
+                    display: flex;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    color: $sub-heading-color-verylight;
+
+                    & > div {
+                      display: flex;
+                      align-items: center;
+
+                      & > .linear-line {
+                        height: 0;
+                        width: 5rem;
+                        border-bottom: $border-verydark;
+                        margin: 0 0.5rem;
+                      }
+                    }
+
+                    &-date1 {
+                      border-right: $border-verydark;
+                      padding-right: 0.4rem;
+
+                      & div:last-child {
+                        display: flex;
+                      }
+                    }
+                    &-date2 {
+                      padding-left: 0.4rem;
+
+                      & div:first-child {
+                        display: flex;
+                      }
+                    }
+                  }
+                  .bottom-row {
+                    display: flex;
+                    justify-content: space-between;
+                  }
+                }
+
+                &-single {
+                  display: flex;
+                  flex-direction: row;
+
+                  .date-of-travel {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 40px;
+                  }
+
+                  .time-slot {
+                    display: flex;
+                    flex-direction: column;
+                  }
+
+                  .detail-heading {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    color: $sub-heading-color-verylight;
+                  }
+
+                  .detail-content {
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    color: $text-heading-2;
+                  }
+                }
+              }
+
+              & > div {
+                margin-bottom: 2rem;
+              }
+            }
+          }
+
+          &-item.order-package-details {
+            display: flex;
+            align-items: baseline;
+
+            .order-package-details-left {
+              margin-right: 1.5rem;
+            }
+
+            .order-package-details-right {
+              width: 100%;
+              font-weight: 500;
+              font-size: 1.6rem;
+              line-height: 2.4rem;
+              color: $text-heading-2;
+
+              & div:first-child {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+              }
+
+              & div:last-child {
+                font-weight: 400;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                text-decoration-line: underline;
+                color: #0057e7;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+
+      //  SECTION: Order Summary, Payment Details and Offers
+      &.order-summary {
+        margin-top: 3rem;
+        grid-area: 1 / 5 / 7 / 7;
+
+        .booking-summary-container {
+          background: $background-color-white;
+          border: $border-light;
+          border-radius: 10px;
+
+          &-divider {
+            border-bottom: $border-light;
+            margin: 0 1.5rem;
+          }
+
+          &-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 1.5rem 0 1.5rem;
+
+            &-title {
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: $text-heading-2;
+            }
+
+            &-fare-breakup {
+              display: flex;
+              align-items: center;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 20px;
+              color: #0057e7;
+              padding-bottom: 1.5rem;
+
+              .fare-breakup-icon {
+                background: rgba(0, 87, 231, 0.1);
+                margin-left: 0.8rem;
+                height: 2rem;
+                width: 2rem;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 300;
+                cursor: pointer;
+                user-select: none;
+              }
+            }
+          }
+
+          &-body {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5rem;
+
+            &-sub-heading {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 1rem;
+              padding: 1rem 1.5rem;
+              background: $background-color-light-3;
+              color: $sub-heading-color-light;
+              font-weight: 500;
+              font-size: 1.5rem;
+              line-height: 2.2rem;
+            }
+
+            &-line-items {
+              display: flex;
+              flex-direction: column;
+
+              &-item {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1.5rem;
+                margin-bottom: 1.5rem;
+
+                &-left {
+                  font-weight: 400;
+                  font-size: 1.5rem;
+                  line-height: 2.2rem;
+                  color: $text-heading-2;
+                  max-width: 20rem;
+
+                  .discounts {
+                    display: flex;
+
+                    &-name {
+                      margin-right: 0.5rem;
+                      font-weight: 500;
+                      font-size: 1.5rem;
+                      line-height: 2.2rem;
+                      color: $rating-color-high;
+                    }
+                  }
+                }
+
+                &-right {
+                  .strike-price {
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    text-decoration-line: line-through;
+                    color: $sub-heading-color-light;
+                    text-decoration-line: line-through;
+                    margin-right: 0.5rem;
+                  }
+
+                  .actual-price {
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 2.2rem;
+                    color: $text-heading-2;
+                  }
+
+                  .discounts {
+                    .actual-price {
+                      font-weight: 500;
+                      font-size: 1.5rem;
+                      line-height: 2.2rem;
+                      color: $rating-color-high;
+                    }
+                  }
+                }
+              }
+            }
+
+            &-total-payable {
+              display: flex;
+              justify-content: space-between;
+              padding: 1.5rem;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+              color: $text-heading-2;
+
+              &-right {
+                font-weight: 600;
+              }
+            }
+
+            &-use-wallet {
+              padding: 1.5rem 1.5rem 0 1.5rem;
+
+              .field-checkbox {
+                display: flex;
+                margin-bottom: 1.5rem;
+                align-items: center;
+
+                .wallet-text {
+                  display: flex;
+                  margin-left: 1rem;
+                  font-weight: 400;
+                  font-size: 1.2rem;
+                  line-height: 1.8rem;
+                  color: $sub-heading-color-dark;
+
+                  &-amount {
+                    color: $brand-primary-color;
+                  }
+                  &-more-info {
+                    cursor: pointer;
+                  }
+
+                  & div {
+                    margin-right: 0.3rem;
+                  }
+                }
+              }
+            }
+            &-proceed-btn {
+              padding: 15px;
+              button {
+                @include flexAlignCenter;
+                justify-content: center;
+                img {
+                  margin-left: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      //
+
+      // SECTION: Customer Details and Payment Methods
+      &.order-input-details {
+        grid-area: 3 / 1 / 7 / 5;
+
+        .customer-details-container {
+          margin-bottom: 20px;
+
+          .customer-details-form {
+            display: flex;
+            flex-direction: column;
+
+            &-basic-info {
+              display: flex;
+              flex-direction: column;
+            }
+
+            &-group {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 20px;
+
+              .form-item {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 48%;
+
+                &-label {
+                  font-weight: 400;
+                  font-size: 1.3rem;
+                  line-height: 2rem;
+                  color: $sub-heading-color-light;
+                  margin-bottom: 6px;
+                }
+
+                &-sub-parts {
+                  display: flex;
+
+                  &-dropdown {
+                    margin-right: 10px;
+                  }
+
+                  &-input {
+                    flex-basis: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

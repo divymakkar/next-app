@@ -1,0 +1,80 @@
+// Colors
+// Color calculator - http://razorjam.github.io/sasscolourfunctioncalculator/
+// Color names - http://name-of-color.com/
+
+$base-font-family: sans-serif;
+$headings-font-family: inherit;
+
+$font-size-base: 1.3rem;
+$line-height-base: 1.54;
+$base-min-width: 320px;
+
+// Colours
+$base-background-color: #f6f8fb;
+$base-link-color: $brand-primary-color;
+$placeholder-color: #969696;
+$black: #000;
+$white: #fff;
+$default-green: #30c55e;
+$default-red: #ff0202;
+$default-dark-gray: #505050;
+$default-light-gray: #e8e8e8;
+$grey-borders-color: #b4b4b4;
+$default-yellow: #fa4d00;
+$footer-text-gray: #b7b7b7;
+$footer-bg: #2e343d;
+$inactive-text-color: #333333;
+$grey-heading-color: #7c7c7c;
+$grey-text-color: #707070;
+$offers-blue: #00b1e3;
+$offers-grey: #7a7f83;
+$offers-pink: #ff5f5f;
+$offers-yellow: #ff8900;
+$navbar-main-top-background: rgba(0, 0, 0, 0.47);
+$navbar-main-nav-background: rgba(0, 0, 0, 0.58);
+$navbar-main-background-mobile: #f6f8fb;
+$base-text-color: $black !default;
+$inverse-text-color: $white;
+$brand-primary-gradient: linear-gradient(
+  to right,
+  #ff7102 0%,
+  #ff0256 100%
+) !default;
+$gray-text: #707070;
+
+// Headers
+$h1-font-size: 3rem;
+$h2-font-size: 2.6rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 2.2rem;
+$h5-font-size: 2.1rem;
+$h6-font-size: 2rem;
+$desktop-heading-size: 5rem;
+$desktop-small-heading-size: 2rem;
+$mobile-heading-size: 4.375rem;
+$description-size: 1.5rem;
+$large-heading-size: 5rem;
+
+// Buttons
+$btn-color: #fff;
+$btn-background: $brand-primary-color;
+$btn-padding: 8px 15px;
+$btn-font-size: 1rem;
+
+// Static Pages Content Size
+$static-content-size: 1.4rem;
+
+// Headings
+$headings: ("h1, .h1", "h2, .h2", "h3, .h3", "h4, .h4", "h5, .h5", "h6, .h6");
+
+// Forms
+$form-element-padding: $btn-padding !default;
+$form-element-border-color: #d9d9d9;
+$form-element-focus-border-color: darken($form-element-border-color, 15%);
+
+// Misc
+$mobileNavbarHeight: 65px;
+$desktopFullNavbarHeight: 114px;
+// $containerWidth: 1080px;
+
+$hamburgerSlideIn: hamburger-slide-in;

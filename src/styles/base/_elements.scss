@@ -1,0 +1,391 @@
+//SECTION: BUTTONS
+.btn {
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  // font-weight: 600;
+  &__brand-filled {
+    border: 1px solid $brand-primary-color;
+    background-color: $brand-primary-color;
+    color: #ffffff;
+  }
+
+  &__brand-hollow {
+    border: 1px solid $brand-primary-color;
+    background-color: $brand-light-color;
+    color: $brand-primary-color;
+  }
+
+  &__white {
+    background-color: #ffffff;
+    color: $heading-color-dark;
+  }
+
+  &__basic {
+    border: $border-light;
+    color: $sub-heading-color-dark;
+  }
+
+  &__greyed {
+    border: $border-light;
+    background-color: #f4f4f4;
+    color: $description-text-color-2;
+
+    &__active {
+      border: $border-brand;
+      background-color: $brand-light-color;
+      color: $brand-primary-color;
+    }
+  }
+
+  &__sm {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.3rem 2rem;
+    border-radius: 3px;
+  }
+  &__md {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.6rem 2rem;
+  }
+  &__lg {
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 0.6rem 2rem;
+  }
+  &__loading {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 110%;
+      background-color: #ffffff;
+      filter: blur(15px);
+      transform: rotate(30deg);
+      overflow: hidden;
+      animation-name: btn-loading;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.24, 0.8, 0.25, 1);
+    }
+  }
+
+  &.btn-gradient {
+    // background-image: $brand-gradient;
+  }
+}
+//!SECTION:
+
+// SECTION: UL & LI
+.brand-li {
+  list-style: none !important;
+  position: relative;
+  &::before {
+    height: 1rem;
+    width: 1rem;
+    content: "";
+    position: absolute;
+    // top: 50%;
+    left: -2rem;
+    transform: translateY(80%);
+    background: linear-gradient(
+      135deg,
+      $brand-secondary-color 0%,
+      $brand-primary-color 100%
+    );
+    border-radius: 50px;
+  }
+}
+
+// SECTION: Labels
+label.required::after {
+  content: "*";
+  color: $rating-highlight-red;
+}
+
+//SECTION: Inputs
+input {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+.customer-details-form {
+  .p-inputtext {
+    background: $background-color-white;
+    border: $border-light;
+    border-radius: 5px;
+
+    &:hover {
+      border-color: $brand-primary-color !important;
+    }
+
+    &:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: unset !important;
+      border: $border-light !important;
+    }
+  }
+}
+
+.discounts-card {
+  .p-inputtext {
+    background: $background-color-white !important;
+    border: $border-light !important;
+    border-radius: 5px 0 0 5px !important;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+
+    &::placeholder {
+      color: $text-subheading-4;
+    }
+  }
+  .p-inputgroup-addon {
+    background: $brand-primary-color;
+    border-radius: 0 3px 3px 0 !important;
+    color: $background-color-white;
+    border: none !important;
+  }
+}
+
+// SECTION: Radio Button
+.discounts-card {
+  .p-radiobutton .p-radiobutton-box {
+    border: 3px solid #ced4da;
+    width: 17px;
+    height: 17px;
+  }
+  .p-radiobutton .p-radiobutton-box:not(.p-disabled):not(.p-highlight):hover {
+    border-color: $brand-primary-color !important;
+  }
+  .p-radiobutton .p-radiobutton-box.p-highlight {
+    border-color: $brand-primary-color !important;
+    background: $brand-primary-color !important;
+  }
+  .p-radiobutton .p-radiobutton-box:not(.p-disabled).p-focus {
+    box-shadow: unset !important;
+  }
+}
+
+// SECTION: Dropdown
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  color: $brand-primary-color !important;
+  background: $brand-light-color !important;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: $brand-primary-color !important;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: unset !important;
+  border: $border-light !important;
+}
+
+.customer-details-form {
+  .p-dropdown {
+    background: $background-color-white;
+    border: $border-light;
+    border-radius: 5px;
+
+    &:hover {
+      border-color: $brand-primary-color !important;
+    }
+    &:focus {
+      outline: 0 none;
+      outline-offset: 0;
+      box-shadow: unset !important;
+      border: $border-light !important;
+    }
+  }
+  .p-dropdown:not(.p-disabled).p-focus {
+    border-color: $brand-primary-color !important;
+    box-shadow: unset !important;
+  }
+}
+
+//!SECTION
+
+//SECTION: Rating
+.rating-value {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 1px 5px;
+  &__high {
+    background-color: $rating-color-high;
+  }
+}
+//!SECTION:
+
+//SECTION: Text
+.link-btn {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-decoration: underline;
+  color: $hyperlink-text-color;
+  cursor: pointer;
+
+  &__no-underline {
+    text-decoration: none;
+  }
+
+  &__expand-link {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #0057e7;
+    text-decoration: none;
+  }
+}
+//!SECTION:
+
+//SECTION: Prime React
+
+// SUBSECTION: Accordion
+.collapsible-accordion {
+  padding-top: 2rem !important;
+
+  .p-accordion-header {
+    .p-accordion-header-link {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 !important;
+
+      .p-accordion-toggle-icon {
+        order: 2;
+        font-size: $card-header-font-lg;
+      }
+      .p-accordion-header-text {
+        font-family: $brand-font-family;
+        font-size: $card-header-font-lg;
+        font-weight: 500;
+        color: $heading-color-dark !important;
+        order: 1;
+      }
+    }
+  }
+  .p-accordion-content {
+    padding: 2rem 0 0 0 !important;
+    ul:first-child {
+      // border: none !important;
+    }
+  }
+}
+.collapsible-container {
+  .p-accordion-header {
+    display: none !important;
+    height: 0 !important;
+  }
+  .p-accordion-content {
+    padding: 0 !important;
+    ul {
+      border: none !important;
+    }
+  }
+}
+
+// SUBSECTION: Tabmenu
+.tabmenu {
+  .p-tabmenu {
+    font-family: $brand-font-family;
+    .p-menuitem-text {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+    .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+      color: $brand-primary-color;
+      border-color: $brand-primary-color;
+      &:not(.p-disabled):focus {
+        box-shadow: none;
+      }
+    }
+    .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+      box-shadow: none;
+    }
+
+    .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+      color: $sub-heading-color-dark;
+    }
+    .p-tabmenu-nav {
+      justify-content: space-evenly !important;
+      @include media("<tablet") {
+        width: 120%;
+      }
+    }
+  }
+
+  &__left-aligned {
+    .p-tabmenu {
+      .p-tabmenu-nav {
+        justify-content: flex-start !important;
+      }
+      .p-accordion-content {
+        ul {
+          padding-bottom: 0 !important;
+        }
+      }
+      .p-menuitem-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-right: 10rem !important;
+        .p-menuitem-icon {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+// SUBSECTION: Checkbox
+.field-checkbox {
+  .p-checkbox .p-checkbox-box.p-highlight {
+    background: $background-color-white !important;
+  }
+  .p-checkbox-icon {
+    color: $sub-heading-color-dark !important;
+  }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: $brand-primary-color !important;
+  }
+  .p-checkbox .p-checkbox-box {
+    border: $border-light !important;
+    border-radius: 2px !important;
+  }
+  .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus {
+    box-shadow: unset !important;
+  }
+}
+
+// SUBSECTION: Progress Bar
+.p-progressbar {
+  height: 6px !important;
+  background: $background-color-light-1 !important;
+  border-radius: 5px !important;
+}
+
+.p-progressbar .p-progressbar-value {
+  background: linear-gradient(
+    89.03deg,
+    $brand-primary-color 0%,
+    $rating-star-color 100%
+  ) !important;
+}
+
+// SUBSECTION: Input
+.p-button {
+  background: $brand-primary-color !important;
+  border: 1px solid $brand-primary-color !important;
+}
+
+//!SECTION:

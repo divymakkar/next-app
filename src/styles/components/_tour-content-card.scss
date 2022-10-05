@@ -1,0 +1,49 @@
+.tour-content-card {
+  width: 100%;
+  // padding: 1.3rem 1.5rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  color: $heading-color-dark;
+  background-color: #ffffff;
+  border: $border-light;
+  border-radius: 10px;
+
+  .card-title {
+    font-size: $card-header-font-lg;
+    font-weight: 500;
+    color: $heading-color-dark;
+  }
+  .content-card-item {
+    margin: 1rem 0;
+
+    &__bordered {
+      border: $border-light;
+      border-radius: 5px;
+    }
+    &__padded {
+      padding: 1rem;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: 500;
+
+      &__border-bottom {
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: $border-light;
+      }
+    }
+  }
+
+  .p-accordion-header-link {
+    font-weight: 500 !important;
+    color: $text-heading-2 !important;
+    border: none !important;
+    background-color: #ffffff !important;
+    border-radius: 0 !important;
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+}

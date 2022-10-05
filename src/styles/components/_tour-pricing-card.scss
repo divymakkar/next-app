@@ -1,0 +1,57 @@
+.tour-booking-details-card {
+  border-radius: 10px;
+  @include media("<tablet-lg") {
+    display: none;
+  }
+  @include media(">tablet-lg") {
+    grid-area: 2 / 2 / 4 / 3;
+  }
+
+  .booking-date-picker {
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .guests-selector-wrapper {
+    font-size: 1.3rem;
+    font-weight: 500;
+    .entity-picker-input {
+      padding-left: 0;
+      border: none;
+    }
+    .entity-picker-wrapper {
+      left: -1.5rem;
+    }
+  }
+
+  .tour-pricing {
+    color: $heading-color-dark;
+    .title {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    .tour-pricing-current {
+      display: flex;
+      align-items: baseline;
+    }
+    &__strike-through {
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-decoration: line-through;
+      color: $description-text-color-2;
+    }
+    &__current {
+      font-size: 2.3rem;
+      font-weight: 600;
+    }
+    &__price-unit {
+      position: relative;
+      left: 3px;
+      bottom: 2px;
+      z-index: 1;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $description-text-color-2;
+    }
+  }
+}

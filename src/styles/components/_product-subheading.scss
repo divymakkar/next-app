@@ -1,0 +1,33 @@
+.product-sub-heading {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $text-heading-2;
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+
+    .rating-star {
+      margin-right: 5px;
+      color: $rating-star-color;
+    }
+  }
+  .product-reviews {
+    margin-left: 1rem;
+    text-decoration: underline;
+  }
+  .product-location {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+    text-decoration: underline;
+
+    img {
+      position: relative;
+      right: 5px;
+      // top: 2px;
+    }
+  }
+}

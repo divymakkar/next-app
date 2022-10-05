@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @include media("<phone-lg") {
+    font-size: 50%;
+  }
+  @include media("<=phone") {
+    font-size: 40%;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  max-height: 1000000px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $base-text-color;
+  background: $base-background-color;
+  font: #{$font-size-base}/#{$line-height-base};
+  min-width: $base-min-width;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// adaptive images
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+button {
+  background-color: transparent;
+  border: $border-light;
+}
+
+ul {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// google map fix
+.gm-style img {
+  max-width: none;
+}

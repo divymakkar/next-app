@@ -1,0 +1,277 @@
+.tour-reviews-wrapper {
+  margin-top: 2rem;
+  .review-head {
+    display: flex;
+    justify-content: space-between;
+
+    @include media("<=tablet") {
+      display: block;
+    }
+  }
+  .write-a-review-card {
+    margin-top: 0;
+
+    .content {
+      margin: 1.5rem 0;
+    }
+    @include media("<=tablet") {
+      margin-top: 2rem;
+      .content {
+        margin: 2rem 0;
+      }
+    }
+  }
+  .review-head-left {
+    flex-grow: 1;
+  }
+  .review-head-right {
+    align-self: flex-start;
+    width: 30%;
+    max-width: 33rem;
+    margin-left: 2rem;
+
+    @include media("<=tablet") {
+      margin-left: 0;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  .rating-stats {
+    $rating-stats-height: 18rem;
+    display: flex;
+
+    .rating-box {
+      width: 22rem;
+      height: $rating-stats-height;
+      padding: 1rem;
+      padding-top: 5px;
+      border: $border-dark;
+      border-radius: 10px;
+    }
+    .rating-number {
+      color: $sub-heading-color-dark;
+      .current-rating {
+        font-size: 5rem;
+        font-weight: 500;
+      }
+      .total-rating {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+    .rating-stars {
+      width: 100%;
+    }
+    .rating-vs-reviews {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      .stat {
+        width: 50%;
+        &:not(:last-child) {
+          border-right: $border-dark;
+        }
+        &:last-child {
+          padding-left: 1rem;
+        }
+        .stat-name {
+          margin: 0;
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: $sub-heading-color-light;
+        }
+        .stat-count {
+          font-size: 2rem;
+          font-weight: 500;
+          color: $text-heading-2;
+        }
+      }
+    }
+    .rating-bars {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: $rating-stats-height;
+    }
+    .rating-progress-line {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-left: 1.5rem;
+
+      .side-value {
+        i {
+          color: $rating-star-color;
+        }
+        &:first-child {
+          width: 3rem;
+          margin-right: 1rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        &:last-child {
+          min-width: 2.5rem;
+          padding-left: 1rem;
+        }
+      }
+      .p-progressbar {
+        width: 100%;
+        height: 8px !important;
+        background-color: $background-color-light-1;
+      }
+      .p-progressbar-value {
+        background-color: $brand-primary-color !important;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  .review-image-gallery {
+    margin-top: 2rem;
+    img {
+      cursor: pointer;
+    }
+  }
+  .review-gallery-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: $border-dark;
+    border-radius: 10px;
+
+    @include media("<phone-lg") {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .display-image {
+      position: relative;
+      width: 70%;
+      height: 30rem;
+      margin-right: 1rem;
+
+      @include media("<phone-lg") {
+        width: 100%;
+        height: 20rem;
+        margin-right: 0rem;
+      }
+
+      @include addBottomShadow;
+    }
+    .review-image-container {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        object-fit: cover;
+      }
+    }
+    .column-prop-image-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30%;
+
+      @include media("<phone-lg") {
+        display: none;
+      }
+
+      .column-prop-image {
+        height: calc(50% - 0.5rem);
+      }
+      &:first-child {
+        margin-bottom: 1rem;
+      }
+    }
+    .row-prop-image-wrap {
+      width: 100%;
+      display: flex;
+      margin-top: 1rem;
+
+      @include media(">=phone-lg") {
+        display: none;
+      }
+
+      .row-prop-image {
+        width: calc(100% / 3);
+        height: 8rem;
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+  .all-reviews-wrapper {
+    margin-top: 3rem;
+  }
+  .all-reviews-head {
+    display: flex;
+    justify-content: space-between;
+  }
+  .all-reviews-cta {
+    display: flex;
+    justify-content: space-between;
+    min-width: 25rem;
+    font-size: 1.5rem;
+
+    i {
+      font-size: 1.3rem;
+      margin-right: 1rem;
+    }
+
+    button {
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
+  }
+  .all-reviews-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    margin-top: 2rem;
+
+    @include media("<phone-lg") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .all-review-card {
+    padding: 1.3rem 1.5rem;
+    border: $border-light;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+  .review-highlights-card {
+    margin-top: 2rem;
+  }
+  .review-highlights-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .review-highlight {
+    width: max-content;
+    padding: 0.8rem 1rem;
+    border: $border-light;
+    border-radius: 5px;
+    margin: 1rem 1rem 0 0;
+
+    @include media("<phone-lg") {
+      padding: 0.5rem;
+    }
+
+    &__green {
+      border-color: $rating-highlight-green;
+    }
+    &__yellow {
+      border-color: $rating-highlight-yellow;
+    }
+    &__red {
+      border-color: $rating-highlight-red;
+    }
+  }
+}

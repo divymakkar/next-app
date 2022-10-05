@@ -1,0 +1,140 @@
+.custom-date-picker-container {
+  .custom-day {
+    font-weight: 500;
+    background-color: $brand-light-color;
+    // color: #ffffff;
+    border-radius: 3px;
+    &:hover {
+      background-color: $brand-light-color;
+    }
+  }
+  .custom-popper {
+  }
+
+  .react-datepicker {
+    display: flex;
+    font-size: 1em;
+    border: $border-light;
+    border-radius: 10px;
+    font-family: $brand-font-family;
+
+    &__day--selected,
+    &__day--in-range,
+    &__month-text--selected,
+    &__month-text--in-selecting-range,
+    &__month-text--in-range,
+    &__quarter-text--selected,
+    &__quarter-text--in-selecting-range,
+    &__quarter-text--in-range,
+    &__year-text--selected,
+    &__year-text--in-selecting-range,
+    &__year-text--in-range {
+      background-color: $brand-primary-color;
+      color: #fff;
+    }
+    &__day-name,
+    &__day {
+      width: 3em;
+      line-height: 1.9em;
+      margin: 0.166em;
+    }
+    &__day {
+      color: $available-day-color;
+      background-color: $available-day-bg-color;
+      &:hover {
+        background-color: $brand-light-color;
+        color: $brand-primary-color;
+      }
+      &--disabled {
+        color: $text-subheading-4;
+        background-color: #ffffff;
+        &:hover {
+          color: $text-subheading-4;
+          background-color: #ffffff;
+        }
+      }
+      &--keyboard-selected {
+        // background-color: $brand-primary-color-dark;
+        // color: #fff;
+      }
+      &--selected {
+        background-color: $brand-light-color;
+        color: $brand-primary-color;
+        // &:hover {
+        //   background-color: $brand-primary-color-dark;
+        //   color: #fff;
+        // }
+      }
+
+      &--in-range {
+        background-color: $brand-primary-color;
+        color: #fff;
+        &:hover {
+          background-color: $brand-primary-color-dark;
+          color: #fff;
+        }
+      }
+
+      &--in-selecting-range {
+        background-color: $brand-light-color !important;
+        color: $text-heading-2;
+      }
+    }
+
+    &__time-container {
+      border: none;
+    }
+    &-time {
+      &__header {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $text-heading-2;
+      }
+    }
+    &__time-list-item {
+      font-family: $brand-font-family !important;
+      font-weight: 400 !important;
+
+      &--selected {
+        background-color: $brand-light-color !important;
+        color: $brand-primary-color !important;
+      }
+    }
+
+    &__header {
+      padding-top: 0.8em;
+      background-color: #fff;
+      border-bottom: none;
+      border-radius: 10px 10px 0 0 !important;
+    }
+    &__month {
+      margin: 1em 1.5em;
+    }
+
+    &__triangle {
+      &::before {
+        border-bottom-color: #e0e0e0 !important;
+      }
+      &::after {
+        border-bottom-color: #ffffff;
+      }
+    }
+    &__navigation {
+      z-index: 100 !important;
+      top: 12px;
+      // &--previous {
+      // }
+    }
+    &__month-container {
+      &:not(:last-child) {
+        border-right: $border-light;
+      }
+    }
+    &__current-month {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $text-heading-2;
+      margin-bottom: 1rem;
+    }
+  }
+}

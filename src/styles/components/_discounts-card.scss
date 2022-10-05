@@ -1,0 +1,314 @@
+.discounts-card-modal-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1px);
+  z-index: 11;
+
+  // Overriding default discounts-card from below according to modal design
+  .discounts-card-container {
+    background-color: $background-color-white;
+    height: calc(100vh - 140px);
+    width: 40vw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+
+    @include media("<desktop") {
+      @keyframes modalPopUp {
+        from {
+          height: 0%;
+        }
+        to {
+          height: 70%;
+        }
+      }
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $background-color-white;
+      height: 70vh;
+      width: 100%;
+      top: unset;
+      transform: unset;
+      border-radius: unset;
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      animation-name: modalPopUp;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+    }
+
+    .discounts-card {
+      &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        border-bottom: 1px solid #e0e0e0;
+
+        & > img:last-of-type {
+          cursor: pointer;
+        }
+      }
+
+      &-items {
+        @include media("<desktop") {
+          height: calc(70vh - 60px);
+          overflow-y: scroll;
+          padding: 10px 20px;
+        }
+        padding: 15px 20px;
+        height: calc(100vh - 225px);
+        overflow-y: scroll;
+
+        &-item {
+          @include media("<desktop") {
+            padding: 10px;
+          }
+          margin: 0 0 10px 0;
+          padding: 10px 20px;
+        }
+      }
+
+      &-footer {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+.discounts-card-container {
+  background: $background-color-white;
+  border: $border-light;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  @include media("<=phone-lg") {
+    padding: 10px 20px;
+  }
+
+  .discounts-card {
+    &-title {
+      display: flex;
+      justify-content: space-between;
+
+      &-header {
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $text-heading-2;
+        @include media("<=phone-lg") {
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+        }
+      }
+
+      &-use-promo {
+        cursor: pointer;
+        display: flex;
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        align-items: center;
+        color: $brand-primary-color;
+        user-select: none;
+
+        & img {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &-enter-promo-code {
+      & div:first-child {
+        margin-top: 15px;
+      }
+    }
+
+    &-items {
+      &-item {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0;
+        padding: 10px;
+        border: $border-light;
+        border-radius: 5px;
+
+        &.selected {
+          background: rgba(243, 112, 34, 0.04);
+        }
+
+        .field-radiobutton {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+
+        .discount-item-heading {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          &-icon {
+            margin-right: 10px;
+            @include media("<=phone-lg") {
+              font-size: 2.4rem;
+            }
+          }
+          &-title {
+            width: 100%;
+
+            &-description {
+              font-weight: 500;
+              font-size: 1.3rem;
+              line-height: 1.5rem;
+              color: $text-heading-1;
+            }
+            &-code {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 14px;
+              color: $sub-heading-color-light;
+            }
+
+            & > div {
+              margin-bottom: 5px;
+            }
+          }
+        }
+
+        .discount-item-content {
+          width: 100%;
+
+          &-details {
+            border-top: $border-light;
+            padding: 10px 0 5px 0;
+            margin-top: 5px;
+
+            &-copy-box {
+              padding: 8px 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              border: 0.5px dashed $brand-primary-color;
+              border-radius: 3px;
+
+              .copy-box-code {
+                font-weight: 500;
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+                text-transform: uppercase;
+                color: $text-heading-2;
+              }
+
+              .copy-box-copy-icon {
+                position: relative;
+
+                &:hover {
+                  cursor: pointer;
+
+                  .copy-box-copy-icon-onhover {
+                    opacity: 1;
+                    visibility: visible;
+                    animation: fadeOut 0.2s 3s ease-in forwards;
+                  }
+                }
+              }
+
+              .copy-box-copy-icon-onhover {
+                position: absolute;
+                width: 70px;
+                white-space: nowrap;
+                background-color: $brand-primary-color;
+                color: $background-color-white;
+                font-weight: 400;
+                padding: 2px 4px;
+                border-radius: 4px;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.2s opacity;
+                bottom: 26px;
+                left: -25px;
+                font-size: 1rem;
+                text-align: center;
+
+                &:before {
+                  position: absolute;
+                  content: "";
+                  top: 100%;
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: $brand-primary-color transparent transparent
+                    transparent;
+                }
+              }
+            }
+            &-description {
+              font-weight: 300;
+              font-size: 1.2rem;
+              line-height: 1.4rem;
+              color: $text-heading-2;
+
+              .description-amounts {
+                margin: 10px 0 0 0;
+              }
+              .description-dates {
+                margin: 15px 0 0 0;
+              }
+
+              .description-title {
+                margin-bottom: 5px;
+              }
+              .description-detail {
+                font-weight: 500;
+              }
+            }
+          }
+
+          &-more {
+            text-align: end;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            text-decoration-line: underline;
+            color: $hyperlink-text-color;
+          }
+        }
+      }
+    }
+
+    &-offers {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      color: $text-subheading-2;
+
+      &-expand {
+        margin: 0 5px;
+      }
+    }
+  }
+}

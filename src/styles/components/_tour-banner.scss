@@ -1,0 +1,125 @@
+.tour-banner {
+  margin-top: $header-height;
+  width: 100vw;
+  max-height: 50rem;
+  overflow: hidden;
+  @include media("<=phone") {
+    margin-top: 0;
+  }
+
+  .tour-banner-highlight-container {
+    position: relative;
+    // max-height: 100rem;
+
+    .banner-slick-arrow-wrapper {
+      width: 100%;
+      max-width: $max-app-width;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+
+      @include media("<widescreen") {
+        width: 85%;
+      }
+      @include media("<=tablet-lg") {
+        display: none;
+      }
+    }
+    .banner-slick-arrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
+      height: 5rem;
+      border: $border-light;
+      border-radius: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+
+      i {
+        color: white;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .media-gallery-btn {
+    position: absolute;
+    top: 5rem;
+    right: -1px;
+    z-index: 1;
+    width: max-content;
+    padding: 0.3rem 1rem;
+    border-radius: 50px 0px 0px 50px;
+    background-color: rgba(0, 0, 0, 0.273);
+    color: white;
+    img {
+      position: relative;
+      bottom: -1px;
+    }
+  }
+
+  .tour-banner-images-wrapper {
+    position: relative;
+    width: 50rem;
+    height: 55vh;
+
+    @include media(">=phone-lg", "<tablet-lg") {
+      height: 40vh;
+    }
+    @include media(">=tablet-lg", "<desktop") {
+      height: 55vh;
+    }
+
+    .tour-banner-image {
+      object-fit: cover;
+    }
+  }
+  .tour-banner-slide {
+    .slick-slide {
+      width: 90rem !important;
+      padding: 0 2px;
+
+      @include media("<widescreen") {
+        width: 80rem !important;
+      }
+      @include media("<=desktop-lg") {
+        width: 70rem !important;
+      }
+      @include media("<=tablet-xl") {
+        width: 60rem !important;
+      }
+      @include media("<=tablet-lg") {
+        width: 50rem !important;
+      }
+    }
+    .slick-slide {
+      filter: brightness(0.5);
+    }
+    .slick-active {
+      filter: brightness(1);
+      transition: filter 0.5s ease-in;
+    }
+    .slick-current {
+    }
+  }
+}
+
+.banner-carousel {
+  @include media("<=phone-xl") {
+    display: none;
+  }
+}
+.banner-display-image {
+  height: 40rem;
+  img {
+    object-fit: cover;
+  }
+  @include media(">phone-xl") {
+    display: none;
+  }
+}

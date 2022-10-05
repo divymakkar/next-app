@@ -1,0 +1,66 @@
+.p-sidebar-right {
+  margin-top: $header-height !important;
+  height: calc(100vh - $header-height) !important;
+}
+
+.sidebar-container {
+  width: 50rem !important;
+  border-radius: 10px 0 0 10px;
+
+  overflow-y: scroll;
+
+  .p-sidebar-header {
+    display: none;
+  }
+  .p-sidebar-content {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .custom-sidebar-header {
+    position: fixed;
+    z-index: 1;
+    border-radius: 10px 0 0 0;
+    width: 100%;
+    padding: 2rem;
+    padding-left: 3rem;
+    background-color: #ffffff;
+    border-bottom: $border-light;
+    font-family: $brand-font-family;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $heading-color-dark;
+  }
+  .custom-close-btn {
+    $icon-width: 4rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    width: $icon-width;
+    height: $icon-width;
+    padding: 5px;
+    border: 1px solid $brand-primary-color;
+    border-radius: 50px;
+    background-color: #ffffff;
+    cursor: pointer;
+    img {
+      position: absolute;
+      @include alignBothAxes;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: $icon-width;
+      height: $icon-width;
+      border-radius: 50px;
+      background-color: $brand-light-color;
+      @include alignBothAxes;
+    }
+    // overflow: hidden;
+  }
+  .custom-sidebar-content {
+    padding: 1.25rem 1.5rem;
+    margin-top: 6rem;
+  }
+}

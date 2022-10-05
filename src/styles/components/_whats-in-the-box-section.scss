@@ -1,0 +1,41 @@
+.whats-in-the-box-container {
+  padding-bottom: 2rem;
+}
+
+.whats-in-the-box-card-wrapper {
+  width: 30rem;
+  padding-right: 2rem;
+  .box-card-wrap {
+    position: relative;
+    // width: 27rem;
+  }
+  .box-image-wrap {
+    position: relative;
+    height: 22rem;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .box-image {
+  }
+  .box-title-wrap {
+    @include flexAlignCenter;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  }
+  .box-title-icon {
+    margin-right: 5px;
+  }
+  .box-title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .box-desc {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $text-heading-2;
+  }
+}

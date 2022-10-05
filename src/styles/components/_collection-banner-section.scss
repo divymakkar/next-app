@@ -1,0 +1,132 @@
+$header-menu-height: 114px;
+.banner-section-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0) 30%,
+      transparent
+    );
+  }
+  @include media(">=desktop") {
+    height: 320px;
+  }
+
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .intro-top-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $white;
+    display: flex;
+    align-items: center;
+    height: 420px;
+    padding: 0;
+    @include media("<=tablet") {
+      height: 320px !important;
+    }
+    .container {
+      width: 100%;
+      z-index: 2;
+      max-width: 1080px;
+      margin: 0 auto;
+      @include media("<desktop") {
+        padding-top: 30px;
+        padding: 0 22px;
+      }
+    }
+    &:after {
+      min-height: inherit;
+      @include media(">=phone") {
+        content: "";
+        display: block;
+        width: 0;
+        min-height: 200px;
+      }
+
+      @include media(">=tablet") {
+        min-height: 300px;
+      }
+
+      @include media(">=widescreen") {
+        min-height: 400px;
+      }
+    }
+    .intro-top-content {
+      // align-items: center;
+      flex-direction: column;
+      min-height: inherit;
+      display: flex;
+      .head-col {
+        max-width: calc(100% - 400px);
+        @include media("<desktop") {
+          max-width: 100% !important;
+        }
+  
+        .base-block-head {
+          flex: 0;
+          padding-left: 30px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 3px;
+            background-color: #ff5300;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+          }
+          .head-content {
+            flex: 1 auto;
+            letter-spacing: -1px;
+            align-self: center;
+            text-align: left;
+            .constructed-heading {
+              display: flex;
+              align-items: flex-start;
+              .head-content {
+                text-align: left;
+                flex: 1 auto;
+                letter-spacing: -1px;
+                align-self: center;
+                .title {
+                  font-size: 4rem;
+                  @include media("<=phone") {
+                    font-size: 5rem;
+                  }
+                  letter-spacing: -1px;
+                  text-transform: none;
+                  font-weight: 700;
+                  display: block;
+                  line-height: 1.2;
+                  text-shadow: 1px 0 2px #595959;
+                  font-style: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
